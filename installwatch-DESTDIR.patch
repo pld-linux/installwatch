@@ -1,28 +1,15 @@
-diff -ur installwatch-0.5.6.orig/Makefile installwatch-0.5.6/Makefile
---- installwatch-0.5.6.orig/Makefile	Sat Mar 10 00:21:22 2001
-+++ installwatch-0.5.6/Makefile	Sat Mar 10 00:25:39 2001
-@@ -3,7 +3,7 @@
- # Well, the only configurable part is the following variable.
- # Make sure the directory you specify exists.
- 
--PREFIX=/usr/local
-+PREFIX=/usr
- 
- # End of configurable part
- 
-@@ -24,12 +24,10 @@
+--- installwatch-0.6.3/Makefile~	Sun Dec 23 00:37:06 2001
++++ installwatch-0.6.3/Makefile	Sat Feb 23 23:14:50 2002
+@@ -25,10 +25,9 @@
  	./create-localdecls
  
  install: all
 -	if [ -r $(LIBDIR)/installwatch.so ]; then rm  $(LIBDIR)/installwatch.so; export LD_PRELOAD=""; cp installwatch.so $(LIBDIR); LD_PRELOAD=$(LIBDIR)/installwatch.so; else cp installwatch.so $(LIBDIR); fi
-+	if [ -r $(DESTDIR)$(LIBDIR)/installwatch.so ]; then rm  $(DESTDIR)$(LIBDIR)/installwatch.so; export LD_PRELOAD=""; cp installwatch.so $(DESTDIR)$(LIBDIR); LD_PRELOAD=$(DESTDIR)$(LIBDIR)/installwatch.so; else cp installwatch.so $(DESTDIR)$(LIBDIR); fi
++	if [ -r $(DESTDIR)$(LIBDIR)/installwatch.so ]; then rm  $(DESTDIR)$(LIBDIR)/installwatch.so; export LD_PRELOAD=""; cp installwatch.so $(DESTDIR)$(LIBDIR); LD_PRELOAD=$(LIBDIR)/installwatch.so; else cp installwatch.so $(DESTDIR)$(LIBDIR); fi
  	
 -	sed -e "s|#PREFIX#|$(PREFIX)|" < installwatch > $(BINDIR)/installwatch
 -	chmod 755 $(BINDIR)/installwatch
--	cp contrib/inst2rpm $(BINDIR)/inst2rpm
--	chmod 755 $(BINDIR)/inst2rpm
 +	sed -e "s|#PREFIX#|$(PREFIX)|" < installwatch > $(DESTDIR)$(BINDIR)/installwatch
-+	cp contrib/inst2rpm $(DESTDIR)$(BINDIR)/inst2rpm
  
  uninstall:
  	rm $(LIBDIR)/installwatch.so

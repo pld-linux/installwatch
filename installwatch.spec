@@ -1,5 +1,5 @@
 Summary:	Monitor for installed programs
-Summary(pl):	Monitor instalacji progamów
+Summary(pl):	Monitor instalacji programów
 Name:		installwatch
 Version:	0.6.3
 Release:	2

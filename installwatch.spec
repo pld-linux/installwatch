@@ -37,13 +37,11 @@ install -d $RPM_BUILD_ROOT{%{_libdir},%{_bindir}}
 	BINDIR=%{_bindir} \
 	LIBDIR=%{_libdir}
 
-gzip -9nf BUGS CHANGELOG README TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc BUGS CHANGELOG README TODO
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/*

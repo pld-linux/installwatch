@@ -1,0 +1,20 @@
+--- installwatch-0.6.3/Makefile~	Sat Feb 23 21:22:34 2002
++++ installwatch-0.6.3/Makefile	Sat Feb 23 21:19:51 2002
+@@ -13,13 +13,16 @@
+ BINDIR=$(PREFIX)/bin
+ LIBDIR=$(PREFIX)/lib
+ 
++CC=gcc
++CFLAGS=
++
+ all: installwatch.so
+ 
+ installwatch.so: installwatch.o
+ 	ld -shared -o installwatch.so installwatch.o -ldl -lc
+ 
+ installwatch.o: installwatch.c localdecls.h
+-	gcc -Wall -c -D_GNU_SOURCE -DPIC -fPIC -D_REENTRANT -DVERSION=\"$(VERSION)\" installwatch.c
++	$(CC) $(CFLAGS) -Wall -c -D_GNU_SOURCE -DPIC -fPIC -D_REENTRANT -DVERSION=\"$(VERSION)\" installwatch.c
+ 
+ localdecls.h:
+ 	./create-localdecls

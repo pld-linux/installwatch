@@ -3,8 +3,8 @@ Summary(pl):	Monitor instalacji progamów
 Name:		installwatch
 Version:	0.6.3
 Release:	1
-Group:		Applications/System
 License:	GPL
+Group:		Applications/System
 Source0:	http://asic-linux.com.mx/~izto/files/source/%{name}-%{version}.tgz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-cflags.patch

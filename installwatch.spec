@@ -18,11 +18,11 @@ Installwatch jest bardzo prostym programem zapisuj±cym pliki tworzone
 i modyfikowane podczas instalacji nowego programu.
 
 %prep
-%setup -q 
+%setup -q
 %patch0 -p1
 
 %build
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT

@@ -4,8 +4,6 @@ Name:		installwatch
 Version:	0.5.6
 Release:	1
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 License:	GPL
 Source0:	http://mayams.net/~izto/%{name}-%{version}.tgz
 Patch0:		%{name}-DESTDIR.patch

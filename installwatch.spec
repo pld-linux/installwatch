@@ -2,7 +2,7 @@ Summary:	Monitor for installed programs
 Summary(pl):	Monitor instalacji progamów
 Name:		installwatch
 Version:	0.6.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://asic-linux.com.mx/~izto/checkinstall/files/source/%{name}-%{version}.tgz

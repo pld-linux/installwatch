@@ -5,7 +5,7 @@ Version:	0.6.3
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://asic-linux.com.mx/~izto/files/source/%{name}-%{version}.tgz
+Source0:	http://asic-linux.com.mx/~izto/checkinstall/files/source/%{name}-%{version}.tgz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-cflags.patch
 URL:		http://asic-linux.com.mx/~izto/installwatch.html

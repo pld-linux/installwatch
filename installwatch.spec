@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://asic-linux.com.mx/~izto/checkinstall/files/source/%{name}-%{version}.tgz
+# Source0-md5:	5dd4c411432e8e88bfd64fb688a5fd6a
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-cflags.patch
 URL:		http://asic-linux.com.mx/~izto/installwatch.html

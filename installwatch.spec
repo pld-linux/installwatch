@@ -9,7 +9,7 @@ Source0:	http://asic-linux.com.mx/~izto/checkinstall/files/source/%{name}-%{vers
 # Source0-md5:	5dd4c411432e8e88bfd64fb688a5fd6a
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-cflags.patch
-URL:		http://asic-linux.com.mx/~izto/installwatch.html
+URL:		http://asic-linux.com.mx/~izto/checkinstall/installwatch.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,7 +26,9 @@ plikach tworzonych i modyfikowanych podczas instalacji nowego programu.
 %patch1 -p1
 
 %build
-%{__make} CC=%{__cc} CFLAGS="%{rpmcflags}"
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT

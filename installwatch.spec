@@ -1,5 +1,5 @@
 Summary:	Monitor for installed programs
-Summary(pl):	Monitor instalacji programów
+Summary(pl.UTF-8):   Monitor instalacji programÃ³w
 Name:		installwatch
 Version:	0.6.3
 Release:	2
@@ -16,8 +16,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Installwatch is an extremely simple utility to keep track of created
 and modified files during the installation of a new program.
 
-%description -l pl
-Installwatch jest bardzo prostym programem zapisuj±cym informacje o
+%description -l pl.UTF-8
+Installwatch jest bardzo prostym programem zapisujÄ…cym informacje o
 plikach tworzonych i modyfikowanych podczas instalacji nowego programu.
 
 %prep
